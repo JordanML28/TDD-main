@@ -11,6 +11,17 @@ public class TicTacToe {
             throw new RuntimeException("Coordenada X inválida");
         }
 
+
+
+
+
+
+        //Alex
+        // Verificación general de celda ocupada
+        if (board[x][y] != '\u0000') {
+            throw new RuntimeException("Espacio ocupado");
+        }
+
         // Colocamos la pieza si todo está correcto
         board[x][y] = player;
     }
