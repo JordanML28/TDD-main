@@ -12,8 +12,9 @@ public class TicTacToe {
             throw new RuntimeException("Coordenada X inválida");
         }
 
-        //Jackeline
-        if (y < 0 || y > 2) {
+     
+        // Jackeline
+        if (!esCoordenadaValida(y)) {
             throw new RuntimeException("Coordenada Y inválida");
         }
         //Alex
