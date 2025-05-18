@@ -37,4 +37,15 @@ public class TicTacToeTest {
 
         // 3. Verificación (automática)
     }
+    // Pruebas Requerimiento 2:
+    // Jordan
+    @Test
+    public void primerTurnoDebeSerX() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+        // 2. Lógica
+        char jugador = game.getJugadorActual();
+        // 3. Verificación
+        assertEquals('X', jugador);
+    }
 }
