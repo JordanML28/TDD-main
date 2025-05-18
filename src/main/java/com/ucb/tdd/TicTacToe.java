@@ -17,9 +17,10 @@ public class TicTacToe {
         if (!esCoordenadaValida(y)) {
             throw new RuntimeException("Coordenada Y inválida");
         }
-        //Alex
+
+        // Alex
         // Verificación general de celda ocupada
-        if (board[x][y] != '\u0000') {
+        if (estaOcupado(x, y)) {
             throw new RuntimeException("Espacio ocupado");
         }
 
@@ -40,5 +41,10 @@ public class TicTacToe {
     // Métodos auxiliares para mejorar legibilidad
     private boolean esCoordenadaValida(int valor) {
         return valor >= 0 && valor <= 2;
+    }
+
+        //Alex
+    private boolean estaOcupado(int x, int y) {
+        return board[x][y] != '\u0000';
     }
 }
