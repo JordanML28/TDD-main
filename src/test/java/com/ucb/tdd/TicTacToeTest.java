@@ -15,4 +15,16 @@ public class TicTacToeTest {
         // 3. Verificación (automática por expected = RuntimeException)
     }
 
+//Jackelin
+   @Test(expected = RuntimeException.class)
+    public void cuandoPiezaFueraDelEjeX_lanzarExcepcion() {
+        // 1. Preparación
+        TicTacToe juego = new TicTacToe();
+
+        // 2. Lógica
+        juego.placePiece(0, 3, 'X'); // posición inválida en X
+
+        // 3. Verificación (automática por expected = RuntimeException)
+    }
+
 }
