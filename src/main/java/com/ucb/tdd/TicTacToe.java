@@ -35,4 +35,9 @@ public class TicTacToe {
             return '+';
         }
     }
+     //Jackeline
+    // Métodos auxiliares para mejorar legibilidad
+    private boolean esCoordenadaValida(int valor) {
+        return valor >= 0 && valor <= 2;
+    }
 }
