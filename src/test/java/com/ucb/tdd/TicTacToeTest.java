@@ -1,6 +1,7 @@
 package com.ucb.tdd;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class TicTacToeTest {
     
@@ -73,5 +74,4 @@ public class TicTacToeTest {
         // 3. Verificación 
         assertEquals('X', jugador);
     }
-
 }
