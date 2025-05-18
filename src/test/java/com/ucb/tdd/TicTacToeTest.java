@@ -26,7 +26,6 @@ public class TicTacToeTest {
 
         // 3. Verificación (automática)
     }
-}
 
     //Alex
     @Test(expected = RuntimeException.class)
