@@ -6,9 +6,9 @@ public class TicTacToe {
     private int turnos = 0;
     
     public void placePiece(int x, int y, char player) {
-        //Jordan
+        // Jordan
         // Validación de límites generales
-        if (x < 0 || x > 2) {
+        if (!esCoordenadaValida(x)) {
             throw new RuntimeException("Coordenada X inválida");
         }
 
