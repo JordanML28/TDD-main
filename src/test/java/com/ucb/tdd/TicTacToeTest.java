@@ -48,4 +48,17 @@ public class TicTacToeTest {
         // 3. Verificación
         assertEquals('X', jugador);
     }
+
+     // Jackeline
+    @Test
+    public void siUltimoTurnoFueX_siguienteDebeSerMas() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+        // 2. Lógica
+        game.placePiece(0, 0, game.getJugadorActual()); // X
+        char jugador = game.getJugadorActual();
+        // 3. Verificación
+        assertEquals('+', jugador);
+    }
+
 }
