@@ -3,7 +3,7 @@ package com.ucb.tdd;
 import org.junit.Test;
 
 public class TicTacToeTest {
-//Jordan 
+    
     @Test(expected = RuntimeException.class)
     public void cuandoPiezaFueraDelEjeX_lanzarExcepcion() {
         // 1. Preparación
@@ -15,7 +15,6 @@ public class TicTacToeTest {
         // 3. Verificación (automática por expected = RuntimeException)
     }
 
-  //Jackeline
     @Test(expected = RuntimeException.class)
     public void cuandoPiezaFueraDelEjeY_lanzarExcepcion() {
         // 1. Preparación
@@ -25,9 +24,8 @@ public class TicTacToeTest {
         juego.placePiece(0, 3, 'X'); // posición inválida en Y
 
         // 3. Verificación (automática)
-    }
+    }
 
-    //Alex
     @Test(expected = RuntimeException.class)
     public void cuandoPiezaEnLugarOcupado_lanzarExcepcion() {
         // 1. Preparación
