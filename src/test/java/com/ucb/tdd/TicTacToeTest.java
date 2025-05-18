@@ -27,3 +27,17 @@ public class TicTacToeTest {
         // 3. Verificación (automática)
     }
 }
+
+    //Alex
+    @Test(expected = RuntimeException.class)
+    public void cuandoPiezaEnLugarOcupado_lanzarExcepcion() {
+        // 1. Preparación
+        TicTacToe juego = new TicTacToe();
+
+        // 2. Lógica
+        juego.placePiece(0, 0, 'X');
+        juego.placePiece(0, 0, '+'); // ya está ocupado
+
+        // 3. Verificación (automática)
+    }
+}
