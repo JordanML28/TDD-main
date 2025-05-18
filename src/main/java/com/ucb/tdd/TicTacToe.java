@@ -11,11 +11,10 @@ public class TicTacToe {
             throw new RuntimeException("Coordenada X inválida");
         }
 
-
-
-
-
-
+        //Jackeline
+        if (y < 0 || y > 2) {
+            throw new RuntimeException("Coordenada Y inválida");
+        }
         //Alex
         // Verificación general de celda ocupada
         if (board[x][y] != '\u0000') {
