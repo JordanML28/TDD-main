@@ -10,6 +10,11 @@ public class TicTacToe {
         if (x > 2) {
             throw new RuntimeException("Coordenada X inválida");
         }
+        //Jackelin
+       if(y>2){
+
+          throw new RuntimeException("Coordenada Y invalida");
+       }
 
         board[x][y] = player; // colocamos la pieza sin más validaciones
     }
