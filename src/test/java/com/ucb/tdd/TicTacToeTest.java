@@ -140,5 +140,34 @@ public class TicTacToeTest {
         assertEquals('X', (char) game.getGanador());
     }
 
+
+     //Jackeline
+    /*public Character getGanador() { 
+        return null; // Implementación mínima para que falle cuando haya un ganador
+    }*/
+    public Character getGanador() {
+        // Línea horizontal (fila 0)
+        if (board[0][0] != '\u0000' && board[0][0] == board[0][1] && board[0][1] == board[0][2]) {
+            return board[0][0];
+        }
+
+        // Línea vertical (columna 0)
+        if (board[0][0] != '\u0000' && board[0][0] == board[1][0] && board[1][0] == board[2][0]) {
+            return board[0][0];
+        }
+
+        // Diagonal principal
+        if (board[0][0] != '\u0000' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+            return board[0][0];
+        }
+
+        // Diagonal secundaria
+        if (board[0][2] != '\u0000' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+            return board[0][2];
+        }
+
+        // No hay ganador
+        return null;
+    }
         
 }
