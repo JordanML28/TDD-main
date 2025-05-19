@@ -47,4 +47,13 @@ public class TicTacToe {
     private boolean estaOcupado(int x, int y) {
         return board[x][y] != '\u0000';
     }
+
+
+
+    //Jackeline
+    public Character getGanador() { 
+        return null; // Implementación mínima para que falle cuando haya un ganador
+    }
+    
+    
 }
