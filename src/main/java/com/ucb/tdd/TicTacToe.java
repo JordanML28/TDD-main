@@ -50,11 +50,6 @@ public class TicTacToe {
 
 
 
-    //Jackeline
-    public Character getGanador() { 
-        return null; // Implementación mínima para que falle cuando haya un ganador
-    }
-
       //Jackeline
     /*public Character getGanador() { 
         return null; // Implementación mínima para que falle cuando haya un ganador
