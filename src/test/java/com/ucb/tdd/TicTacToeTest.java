@@ -74,4 +74,37 @@ public class TicTacToeTest {
         // 3. Verificación 
         assertEquals('X', jugador);
     }
+    // Pruebas Requerimiento 3:
+    //Jordan
+    @Test
+    public void siNoHayTresEnLinea_noHayGanador() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+
+        // 2. Lógica
+        game.placePiece(0, 0, 'X');
+        game.placePiece(1, 0, '+');
+        game.placePiece(0, 1, 'X');
+        game.placePiece(1, 1, '+');
+        game.placePiece(2, 1, 'X');
+
+        // 3. Verificación
+        assertNull(game.getGanador()); // aún no hay ganador
+    }
+
+    @Test
+    public void siTresEnLineaHorizontal_esGanador() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+
+        // 2. Lógica
+        game.placePiece(0, 0, 'X');
+        game.placePiece(1, 0, '+');
+        game.placePiece(0, 1, 'X');
+        game.placePiece(1, 1, '+');
+        game.placePiece(0, 2, 'X');
+
+        // 3. Verificación
+        assertEquals('X', (char) game.getGanador());
+    }
 }
