@@ -54,24 +54,38 @@ public class TicTacToe {
     /*public Character getGanador() { 
         return null; // Implementación mínima para que falle cuando haya un ganador
     }*/
+
+    //Alex
     public Character getGanador() {
-        // Línea horizontal (fila 0)
-        if (board[0][0] != '\u0000' && board[0][0] == board[0][1] && board[0][1] == board[0][2]) {
+        // Revisar filas
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] != '\u0000' &&
+                board[i][0] == board[i][1] &&
+                board[i][1] == board[i][2]) {
+                return board[i][0];
+            }
+        }
+
+        // Revisar columnas
+        for (int i = 0; i < 3; i++) {
+            if (board[0][i] != '\u0000' &&
+                board[0][i] == board[1][i] &&
+                board[1][i] == board[2][i]) {
+                return board[0][i];
+            }
+        }
+
+        // Revisar diagonal principal
+        if (board[0][0] != '\u0000' &&
+            board[0][0] == board[1][1] &&
+            board[1][1] == board[2][2]) {
             return board[0][0];
         }
 
-        // Línea vertical (columna 0)
-        if (board[0][0] != '\u0000' && board[0][0] == board[1][0] && board[1][0] == board[2][0]) {
-            return board[0][0];
-        }
-
-        // Diagonal principal
-        if (board[0][0] != '\u0000' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
-            return board[0][0];
-        }
-
-        // Diagonal secundaria
-        if (board[0][2] != '\u0000' && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+        // Revisar diagonal secundaria
+        if (board[0][2] != '\u0000' &&
+            board[0][2] == board[1][1] &&
+            board[1][1] == board[2][0]) {
             return board[0][2];
         }
 
