@@ -107,4 +107,38 @@ public class TicTacToeTest {
         // 3. Verificación
         assertEquals('X', (char) game.getGanador());
     }
+    //Alex
+    @Test
+    public void siTresEnLineaVertical_esGanador() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+
+        // 2. Lógica
+        game.placePiece(0, 0, 'X');
+        game.placePiece(0, 1, '+');
+        game.placePiece(1, 0, 'X');
+        game.placePiece(1, 1, '+');
+        game.placePiece(2, 0, 'X');
+
+        // 3. Verificación
+        assertEquals('X', (char) game.getGanador());
+    }
+
+    @Test
+    public void siTresEnDiagonal_esGanador() {
+        // 1. Preparación
+        TicTacToe game = new TicTacToe();
+
+        // 2. Lógica
+        game.placePiece(0, 0, 'X');
+        game.placePiece(0, 1, '+');
+        game.placePiece(1, 1, 'X');
+        game.placePiece(0, 2, '+');
+        game.placePiece(2, 2, 'X');
+
+        // 3. Verificación
+        assertEquals('X', (char) game.getGanador());
+    }
+
+        
 }
