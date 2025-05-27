@@ -62,7 +62,7 @@ public class TicTacToe {
             if (board[i][0] != '\u0000' &&
                 board[i][0] == board[i][1] &&
                 board[i][1] == board[i][2]) {
-                return board[i][0];
+                return 0;
             }
         }
 
